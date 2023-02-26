@@ -1,0 +1,38 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: cliente-backend
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://containers-us-west-45.railway.app:7817/railway
+    username: ${USERNAME}
+    password: ${PASSWORD}
+  jpa:
+    properties:
+      hibernate: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+# Spring boot admin conect
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://localhost:8084
+# Logging
+logging:
+  file:
+    name: cliente-backend.log
+  level:
+    sql: debug
+# Actuator
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
