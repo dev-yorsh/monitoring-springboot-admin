@@ -2,6 +2,8 @@
 
 Monitorización de microservicios con spring boot admin
 
+![App Screenshot](https://github.com/dev-yorsh/repository-images/blob/main/spring-boot-admin/Dashboard.png?raw=true)
+
 
 ## Authors
 
